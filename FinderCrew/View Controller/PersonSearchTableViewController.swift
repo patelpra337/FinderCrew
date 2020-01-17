@@ -10,8 +10,14 @@ import UIKit
 
 class PersonSearchTableViewController: UITableViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    // MARK: - Properties
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    // MARK: - Public Methods
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
