@@ -24,11 +24,6 @@ class PersonSearchTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return personController.people.count
@@ -49,7 +44,7 @@ extension PersonSearchTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else { return }
             
-        print("Search for \(searchTerm)...")
+        print("Searching for \(searchTerm)...")
         
         personController.searchForPeopleWith(searchTerm: searchTerm) {
         DispatchQueue.main.async {
